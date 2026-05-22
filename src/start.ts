@@ -22,7 +22,12 @@ const sameOriginMiddleware = createMiddleware().server(async ({ next, request })
   const origin = request.headers.get("origin");
   const referer = request.headers.get("referer");
 
-  if (secFetchSite && secFetchSite !== "same-origin" && secFetchSite !== "same-site") {
+  if (
+    secFetchSite &&
+    secFetchSite !== "same-origin" &&
+    secFetchSite !== "same-site" &&
+    secFetchSite !== "none"
+  ) {
     return new Response("Forbidden", { status: 403 });
   }
 
@@ -41,6 +46,7 @@ const sameOriginMiddleware = createMiddleware().server(async ({ next, request })
 
   return next();
 });
+
 
 export const startInstance = createStart(() => ({
   requestMiddleware: [errorMiddleware, sameOriginMiddleware],

@@ -1,47 +1,43 @@
-import p1 from "@/assets/project1.jpg";
-import p2 from "@/assets/project2.jpg";
-import p3 from "@/assets/project3.jpg";
-import p4 from "@/assets/project4.jpg";
-import p5 from "@/assets/project5.jpg";
 import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    img: p1,
-    name: "Maison Olivier",
-    category: "Residential",
-    location: "Bengaluru, IN",
+    img: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800",
+    name: "Godavari Riverfront Villa",
+    category: "Residential Construction",
+    location: "Rajahmundry, East Godavari",
     span: "lg:col-span-7 lg:row-span-2",
   },
   {
-    img: p4,
-    name: "Cliffside Retreat",
-    category: "Hospitality",
-    location: "Coorg, IN",
+    img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800",
+    name: "Venkateswara Commercial Complex",
+    category: "Commercial Development",
+    location: "Kakinada, East Godavari",
     span: "lg:col-span-5",
   },
   {
-    img: p2,
-    name: "The Atrium House",
-    category: "Interior",
-    location: "Mumbai, IN",
+    img: "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?q=80&w=800",
+    name: "Siri Luxury Duplexes",
+    category: "Residential Construction",
+    location: "Bhimavaram, West Godavari",
     span: "lg:col-span-5",
   },
   {
-    img: p3,
-    name: "Crystal Tower",
-    category: "Commercial",
-    location: "Hyderabad, IN",
+    img: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800",
+    name: "Elite Interior & Architecture",
+    category: "Residential Architecture",
+    location: "Tanuku, West Godavari",
     span: "lg:col-span-7",
   },
   {
-    img: p5,
-    name: "Light Well",
-    category: "Architecture",
-    location: "Pune, IN",
+    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800",
+    name: "Godavari Vista Apartments",
+    category: "Apartment Structural Framing",
+    location: "Tadepalligudem, West Godavari",
     span: "lg:col-span-5",
   },
 ];
+
 
 export function Projects() {
   return (

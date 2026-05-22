@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import { Play } from "lucide-react";
-import project1 from "@/assets/project1.jpg";
-import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
-import project4 from "@/assets/project4.jpg";
-import project5 from "@/assets/project5.jpg";
 import walkthroughImg from "@/assets/walkthrough.jpg";
 
-const reelFrames = [walkthroughImg, project1, project2, project3, project4, project5];
+const reelFrames = [
+  walkthroughImg,
+  "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800",
+  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800",
+  "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?q=80&w=800",
+  "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800",
+  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800",
+];
+
 
 export function Walkthrough() {
   const [frame, setFrame] = useState(0);
