@@ -359,4 +359,16 @@
   .animate-whatsapp-float {
     animation: whatsapp-float 4s ease-in-out infinite;
   }
+
+  @keyframes slide-progress {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  .animate-slide-progress {
+    animation: slide-progress 6s linear forwards;
+  }
 }
