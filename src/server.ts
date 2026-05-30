@@ -69,6 +69,33 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const url = new URL(request.url);
+
+      // Edge-level SEO intercepts to guarantee 100% uptime for Google Search Console
+      if (url.pathname === "/robots.txt") {
+        return new Response(
+          `User-agent: *\nAllow: /\n\nSitemap: https://dpassociates.me/sitemap.xml`,
+          {
+            headers: {
+              "content-type": "text/plain; charset=utf-8",
+              "cache-control": "public, max-age=3600",
+            },
+          }
+        );
+      }
+
+      if (url.pathname === "/sitemap.xml") {
+        return new Response(
+          `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>https://dpassociates.me/</loc>\n    <lastmod>2026-05-30</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>1.0</priority>\n  </url>\n</urlset>`,
+          {
+            headers: {
+              "content-type": "application/xml; charset=utf-8",
+              "cache-control": "public, max-age=3600",
+            },
+          }
+        );
+      }
+
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);
