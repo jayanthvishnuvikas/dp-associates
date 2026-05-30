@@ -79,7 +79,7 @@ export function Services() {
               onClick={() => setActiveService(activeService === i ? null : i)}
               className={`reveal group relative cursor-pointer p-8 md:p-10 border transition-all transform ${
                 activeService === i
-                  ? "bg-accent text-white scale-[1.01] sm:scale-105 border-accent shadow-[0_30px_70px_-20px_rgba(204,171,124,0.4)]"
+                  ? "bg-accent text-accent-foreground scale-[1.01] sm:scale-105 border-accent shadow-[0_30px_70px_-20px_rgba(204,171,124,0.4)]"
                   : "bg-card/90 border-border/80 hover:bg-background hover:-translate-y-1 hover:shadow-[0_24px_60px_-30px_rgba(18,18,18,0.18)]"
               }`}
               style={{
@@ -97,13 +97,13 @@ export function Services() {
                 size={28}
                 strokeWidth={1.25}
                 className={`transition-colors ${
-                  activeService === i ? "text-white" : "text-accent"
+                  activeService === i ? "text-accent-foreground" : "text-accent"
                 }`}
               />
               <h3 className="mt-6 sm:mt-8 font-display text-xl sm:text-2xl">{s.title}</h3>
               <p
                 className={`mt-4 text-sm leading-relaxed transition-colors ${
-                  activeService === i ? "text-white/90" : "text-muted-foreground"
+                  activeService === i ? "text-accent-foreground/80" : "text-muted-foreground"
                 }`}
               >
                 {s.desc}
@@ -111,7 +111,7 @@ export function Services() {
               <div
                 className={`mt-8 text-[10px] uppercase tracking-[0.3em] transition-colors ${
                   activeService === i
-                    ? "text-white/80"
+                    ? "text-accent-foreground/70"
                     : "text-foreground/50 group-hover:text-accent"
                 }`}
               >

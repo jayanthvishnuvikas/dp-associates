@@ -38,7 +38,6 @@ const projects = [
   },
 ];
 
-
 export function Projects() {
   return (
     <section id="projects" className="section-space">

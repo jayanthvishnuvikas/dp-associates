@@ -11,7 +11,6 @@ const reelFrames = [
   "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800",
 ];
 
-
 export function Walkthrough() {
   const [frame, setFrame] = useState(0);
 

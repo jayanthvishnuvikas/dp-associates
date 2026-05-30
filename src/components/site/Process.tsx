@@ -29,7 +29,7 @@ export function Process() {
                 key={s.n}
                 className="reveal group cursor-pointer"
                 style={{
-                  animationDelay: `${index * 0.1}s`,
+                  transitionDelay: `${index * 80}ms`,
                 }}
               >
                 <div className="flex md:block items-center gap-4 sm:gap-5 transition-all duration-700 ease-out group-hover:-translate-y-0.5">

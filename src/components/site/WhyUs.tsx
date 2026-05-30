@@ -48,9 +48,9 @@ export function WhyUs() {
           {items.map((it, index) => (
             <div
               key={it.title}
-              className="reveal bg-gradient-to-br from-white/8 to-white/3 border border-accent/20 hover:border-accent/50 p-6 sm:p-8 md:p-10 group cursor-pointer transition-all duration-500 rounded-lg hover:bg-gradient-to-br hover:from-white/12 hover:to-white/6 hover:shadow-[0_20px_60px_-20px_rgba(204,171,124,0.3)] hover:-translate-y-2 animate-float-up"
+              className="reveal bg-gradient-to-br from-white/8 to-white/3 border border-accent/20 hover:border-accent/50 p-6 sm:p-8 md:p-10 group cursor-pointer transition-all duration-500 rounded-lg hover:bg-gradient-to-br hover:from-white/12 hover:to-white/6 hover:shadow-[0_20px_60px_-20px_rgba(204,171,124,0.3)] hover:-translate-y-2"
               style={{
-                animationDelay: `${index * 0.1}s`,
+                transitionDelay: `${index * 80}ms`,
               }}
             >
               <div className="relative inline-block">
