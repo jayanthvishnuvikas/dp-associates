@@ -22,7 +22,7 @@ const services = [
     desc: "Master plans and concept development tailored to site, brief, and brand.",
     longDesc:
       "We design bespoke luxury properties, villas, and commercial spaces. Our architectural planning team conducts thorough microclimate analysis, solar studies, and contextual research to create blueprints that balance beautiful design with functionality and regulatory requirements.",
-    image: "https://images.unsplash.com/photo-1503387762-592dedb8c260?q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200",
     deliverables: [
       "Conceptual Layouts & Site Plan",
       "Detailed 2D Floor Plans & Sections",

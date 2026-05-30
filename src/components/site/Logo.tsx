@@ -11,10 +11,10 @@ export function Logo({
 }) {
   const sizeClasses =
     size === "large"
-      ? "h-12 w-12 md:h-14 md:w-14"
+      ? "h-11 md:h-13 aspect-[5/3]"
       : size === "medium"
-      ? "h-9 w-9 md:h-10 md:w-10"
-      : "h-8 w-8 md:h-9 md:w-9";
+      ? "h-8.5 md:h-9.5 aspect-[5/3]"
+      : "h-7 md:h-8 aspect-[5/3]";
 
   const textClasses =
     size === "large"
@@ -23,16 +23,17 @@ export function Logo({
       ? "text-[15px] sm:text-lg md:text-xl lg:text-2xl"
       : "text-base md:text-lg";
 
-  const imgSize = size === "large" ? 56 : size === "medium" ? 40 : 36;
-  const gapClass = size === "large" ? "gap-3" : size === "medium" ? "gap-2.5 md:gap-3" : "gap-2";
+  const imgWidth = size === "large" ? 92 : size === "medium" ? 67 : 60;
+  const imgHeight = size === "large" ? 55 : size === "medium" ? 40 : 36;
+  const gapClass = size === "large" ? "gap-2" : size === "medium" ? "gap-1.5" : "gap-1";
 
   return (
     <span className={`inline-flex items-center ${gapClass} ${className}`}>
       <img
         src={logoUrl}
         alt="DP Associates"
-        width={imgSize}
-        height={imgSize}
+        width={imgWidth}
+        height={imgHeight}
         className={`${sizeClasses} object-contain transition-all duration-300 ${
           variant === "dark" ? "invert animate-in fade-in duration-300" : "animate-in fade-in duration-300"
         }`}
