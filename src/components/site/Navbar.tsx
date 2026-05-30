@@ -33,11 +33,9 @@ export function Navbar() {
         <a
           href="#top"
           aria-label="DP Associates home"
-          className={`font-display tracking-[0.2em] text-lg md:text-xl lg:text-2xl transition-colors ${
-            scrolled ? "text-foreground" : "text-white"
-          }`}
+          className="transition-all duration-300 hover:opacity-90 active:scale-[0.98] inline-flex"
         >
-          DP ASSOCIATES
+          <Logo variant={scrolled ? "dark" : "light"} size="medium" />
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
